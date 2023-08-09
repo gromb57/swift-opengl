@@ -13,6 +13,8 @@
 		A0BF7B002A8431AD0043FDA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BF7AFE2A8431AD0043FDA6 /* Main.storyboard */; };
 		A0BF7B022A8431B20043FDA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0BF7B012A8431B20043FDA6 /* Assets.xcassets */; };
 		A0BF7B052A8431B20043FDA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0BF7B032A8431B20043FDA6 /* LaunchScreen.storyboard */; };
+		A0BF7B0D2A8437FD0043FDA6 /* Vertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B0C2A8437FD0043FDA6 /* Vertex.swift */; };
+		A0BF7B122A8438740043FDA6 /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B112A8438740043FDA6 /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		A0BF7B012A8431B20043FDA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A0BF7B042A8431B20043FDA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0BF7B062A8431B20043FDA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A0BF7B0C2A8437FD0043FDA6 /* Vertex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vertex.swift; sourceTree = "<group>"; };
+		A0BF7B112A8438740043FDA6 /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		A0BF7AF72A8431AD0043FDA6 /* swift-opengl */ = {
 			isa = PBXGroup;
 			children = (
+				A0BF7B0F2A84381E0043FDA6 /* src */,
 				A0BF7AF82A8431AD0043FDA6 /* AppDelegate.swift */,
 				A0BF7AFA2A8431AD0043FDA6 /* SceneDelegate.swift */,
 				A0BF7AFC2A8431AD0043FDA6 /* ViewController.swift */,
@@ -65,6 +70,23 @@
 				A0BF7B062A8431B20043FDA6 /* Info.plist */,
 			);
 			path = "swift-opengl";
+			sourceTree = "<group>";
+		};
+		A0BF7B0F2A84381E0043FDA6 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				A0BF7B102A8438660043FDA6 /* extensions */,
+				A0BF7B0C2A8437FD0043FDA6 /* Vertex.swift */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		A0BF7B102A8438660043FDA6 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A0BF7B112A8438740043FDA6 /* ArrayExtension.swift */,
+			);
+			path = extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0BF7B122A8438740043FDA6 /* ArrayExtension.swift in Sources */,
 				A0BF7AFD2A8431AD0043FDA6 /* ViewController.swift in Sources */,
+				A0BF7B0D2A8437FD0043FDA6 /* Vertex.swift in Sources */,
 				A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */,
 				A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */,
 			);
@@ -207,6 +231,7 @@
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
+					"GLES_SILENCE_DEPRECATION=1",
 					"DEBUG=1",
 					"$(inherited)",
 				);
@@ -264,6 +289,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = "GLES_SILENCE_DEPRECATION=1";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -287,7 +313,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = $(DEVELOPMENT_TEAM);
+				DEVELOPMENT_TEAM = "${DEVELOPMENT_TEAM}";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-opengl/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -315,7 +341,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = $(DEVELOPMENT_TEAM);
+				DEVELOPMENT_TEAM = "${DEVELOPMENT_TEAM}";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "swift-opengl/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

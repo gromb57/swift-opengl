@@ -160,10 +160,29 @@ class ViewController: GLKViewController {
     private var vao = GLuint()
     
     private var effect = GLKBaseEffect()
+    
+    private var rotation: Float = 0.0
 }
 
 extension ViewController: GLKViewControllerDelegate {
     func glkViewControllerUpdate(_ controller: GLKViewController) {
+        // 1
+        let aspect = fabsf(Float(view.bounds.size.width) / Float(view.bounds.size.height))
+        // 2
+        let projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0), aspect, 4.0, 10.0)
+        // 3
+        effect.transform.projectionMatrix = projectionMatrix
         
+        //
+        //
+        //
+        
+        // 1
+        var modelViewMatrix = GLKMatrix4MakeTranslation(0.0, 0.0, -6.0)
+        // 2
+        rotation += 90 * Float(timeSinceLastUpdate)
+        modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 0, 1)
+        // 3
+        effect.transform.modelviewMatrix = modelViewMatrix
     }
 }

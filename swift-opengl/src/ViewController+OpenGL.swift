@@ -1,26 +1,15 @@
 //
-//  ViewController.swift
+//  ViewController+OpenGL.swift
 //  swift-opengl
 //
-//  Created by Jerome Bach on 09/08/2023.
+//  Created by Jerome Bach on 13/08/2023.
 //
 
+import Foundation
 import GLKit
 
-class ViewController: GLKViewController {
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.setupGL()
-    }
-    
-    deinit {
-        self.tearDownGL()
-    }
-    
-    private var context: EAGLContext?
-    
-    private func setupGL() {
+extension ViewController {
+    func setupGL() {
         // 1
         context = EAGLContext(api: .openGLES3)
         // 2
@@ -107,7 +96,7 @@ class ViewController: GLKViewController {
         glBindBuffer(GLenum(GL_ELEMENT_ARRAY_BUFFER), 0)
     }
     
-    private func tearDownGL() {
+    func tearDownGL() {
         EAGLContext.setCurrent(context)
 
         glDeleteBuffers(1, &vao)
@@ -142,46 +131,40 @@ class ViewController: GLKViewController {
                        nil)                      // 4
         glBindVertexArrayOES(0)
     }
-    
-    var Vertices = [
-        Vertex(x:  1, y: -1, z: 0, r: 1, g: 0, b: 0, a: 1),
-        Vertex(x:  1, y:  1, z: 0, r: 0, g: 1, b: 0, a: 1),
-        Vertex(x: -1, y:  1, z: 0, r: 0, g: 0, b: 1, a: 1),
-        Vertex(x: -1, y: -1, z: 0, r: 0, g: 0, b: 0, a: 1),
-    ]
-    
-    var Indices: [GLubyte] = [
-        0, 1, 2,
-        2, 3, 0
-    ]
-    
-    private var ebo = GLuint()
-    private var vbo = GLuint()
-    private var vao = GLuint()
-    
-    private var effect = GLKBaseEffect()
-    
-    private var rotation: Float = 0.0
 }
 
 extension ViewController: GLKViewControllerDelegate {
     func glkViewControllerUpdate(_ controller: GLKViewController) {
+
         // 1
         let aspect = fabsf(Float(view.bounds.size.width) / Float(view.bounds.size.height))
         // 2
-        let projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0), aspect, 4.0, 10.0)
-        // 3
-        effect.transform.projectionMatrix = projectionMatrix
+        var projectionMatrix: GLKMatrix4
+        
+        if self.isPerspective {
+            projectionMatrix = GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65.0), aspect, 4.0, 10.0)
+            // 3
+            effect.transform.projectionMatrix = projectionMatrix
+        } else {
+            effect.transform.projectionMatrix = GLKMatrix4Identity
+        }
         
         //
         //
         //
         
-        // 1
-        var modelViewMatrix = GLKMatrix4MakeTranslation(0.0, 0.0, -6.0)
+        // 1  - perpective
+        var modelViewMatrix: GLKMatrix4
+        if self.isPerspective {
+            modelViewMatrix = GLKMatrix4MakeTranslation(0.0, 0.0, -6.0)
+        } else {
+            modelViewMatrix = GLKMatrix4Identity
+        }
         // 2
-        rotation += 90 * Float(timeSinceLastUpdate)
-        modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 0, 1)
+        if self.isRotating {
+            rotation += 90 * Float(timeSinceLastUpdate)
+            modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 0, 1)
+        }
         // 3
         effect.transform.modelviewMatrix = modelViewMatrix
     }

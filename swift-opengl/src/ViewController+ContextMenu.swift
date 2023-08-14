@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import GLKit
 
 extension ViewController: UIContextMenuInteractionDelegate {
     func setupContextMenu() {
@@ -33,31 +34,58 @@ extension ViewController: UIContextMenuInteractionDelegate {
                                 configurationForMenuAtLocation location: CGPoint) -> UIContextMenuConfiguration? {
         return UIContextMenuConfiguration(identifier: nil,
                                           previewProvider: nil,
-                                          actionProvider: {
-                suggestedActions in
+                                          actionProvider: { [weak self] suggestedActions in
                                             
-            return UIMenu(title: "", children: self.actions())
+            return UIMenu(title: "", children: self?.actions() ?? [])
         })
     }
     
-    func actions() -> [UIAction] {
+    func actions() -> [UIMenuElement] {
         return  [
             self.perspectiveAction(),
-            self.rotateAction()
+            self.rotateAction(),
+            self.shapesSubmenu()
         ]
     }
     
     func perspectiveAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Perspective: Activate/Deactivate", comment: ""),
-                 image: UIImage(systemName: "perspective")) { action in
-            self.isPerspective = !self.isPerspective
+                 image: UIImage(systemName: "perspective")) { [weak self] action in
+            if let self {
+                self.isPerspective = !self.isPerspective
+            }
         }
     }
     
     func rotateAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Rotation: Activate/Deactivate", comment: ""),
-                 image: UIImage(systemName: "rotate.left")) { action in
-            self.isRotating = !self.isRotating
+                 image: UIImage(systemName: "rotate.left")) { [weak self] action in
+            if let self {
+                self.isRotating = !self.isRotating
+            }
         }
+    }
+
+    func shapesSubmenu() -> UIMenu {
+        return UIMenu(title: "Shapes", children: [
+            self.splashAction(),
+            self.squareAction()
+        ])
+    }
+          
+    func splashAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Splash", comment: ""),
+                image: UIImage(systemName: "photo.artframe")) { [weak self] action in
+            UIApplication.shared.windows.first!.rootViewController = nil
+            UIApplication.shared.windows.first!.rootViewController = SplashController()
+       }
+    }
+    
+    func squareAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Square", comment: ""),
+                image: UIImage(systemName: "square")) { [weak self] action in
+            UIApplication.shared.windows.first!.rootViewController = nil
+            UIApplication.shared.windows.first!.rootViewController = SquareController()
+       }
     }
 }

@@ -11,7 +11,7 @@
         <!--GLKit View Controller-->
         <scene sceneID="HeG-Z6-DEH">
             <objects>
-                <glkViewController preferredFramesPerSecond="60" id="bQr-HI-QiF" customClass="ViewController" customModule="swift_opengl" customModuleProvider="target" sceneMemberID="viewController">
+                <glkViewController preferredFramesPerSecond="60" id="bQr-HI-QiF" customClass="SplashController" customModule="swift_opengl" customModuleProvider="target" sceneMemberID="viewController">
                     <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" enableSetNeedsDisplay="NO" id="mtJ-Dz-fEf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

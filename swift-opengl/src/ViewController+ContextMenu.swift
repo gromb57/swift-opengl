@@ -43,7 +43,7 @@ extension ViewController: UIContextMenuInteractionDelegate {
     func actions() -> [UIMenuElement] {
         return  [
             self.perspectiveAction(),
-            self.rotateAction(),
+            self.rotationsSubmenu(),
             self.shapesSubmenu()
         ]
     }
@@ -57,20 +57,70 @@ extension ViewController: UIContextMenuInteractionDelegate {
         }
     }
     
-    func rotateAction() -> UIAction {
-        return UIAction(title: NSLocalizedString("Rotation: Activate/Deactivate", comment: ""),
+    func rotationsSubmenu() -> UIMenu {
+        return UIMenu(title: "Rotations", children: [
+            self.rotateOnXAction(),
+            self.rotateOnYAction(),
+            self.rotateOnZAction()
+        ])
+    }
+    
+    func rotateOnXAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Rotation on X: Activate/Deactivate", comment: ""),
                  image: UIImage(systemName: "rotate.left")) { [weak self] action in
             if let self {
-                self.isRotating = !self.isRotating
+                self.isRotatingOnX = !self.isRotatingOnX
+                self.isRotatingOnY = false
+                self.isRotatingOnZ = false
+            }
+        }
+    }
+    
+    func rotateOnYAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Rotation on Y: Activate/Deactivate", comment: ""),
+                 image: UIImage(systemName: "rotate.left")) { [weak self] action in
+            if let self {
+                self.isRotatingOnX = false
+                self.isRotatingOnY = !self.isRotatingOnY
+                self.isRotatingOnZ = false
+            }
+        }
+    }
+    
+    func rotateOnZAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Rotation on Z: Activate/Deactivate", comment: ""),
+                 image: UIImage(systemName: "rotate.left")) { [weak self] action in
+            if let self {
+                self.isRotatingOnX = false
+                self.isRotatingOnY = false
+                self.isRotatingOnZ = !self.isRotatingOnZ
             }
         }
     }
 
     func shapesSubmenu() -> UIMenu {
         return UIMenu(title: "Shapes", children: [
+            self.pyramidAction(),
+            self.sphereAction(),
             self.splashAction(),
             self.squareAction()
         ])
+    }
+    
+    func pyramidAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Pyramid", comment: ""),
+                image: UIImage(systemName: "pyramid")) { [weak self] action in
+            UIApplication.shared.windows.first!.rootViewController = nil
+            UIApplication.shared.windows.first!.rootViewController = PyramidController()
+       }
+    }
+    
+    func sphereAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Sphere", comment: ""),
+                image: UIImage(systemName: "circlebadge")) { [weak self] action in
+            UIApplication.shared.windows.first!.rootViewController = nil
+            UIApplication.shared.windows.first!.rootViewController = SphereController()
+       }
     }
           
     func splashAction() -> UIAction {

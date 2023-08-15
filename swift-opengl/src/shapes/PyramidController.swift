@@ -1,25 +1,30 @@
 //
-//  SplashController.swift
+//  PyramidController.swift
 //  swift-opengl
 //
-//  Created by Jerome Bach on 14/08/2023.
+//  Created by Jerome Bach on 15/08/2023.
 //
 
 import Foundation
 import GLKit
 
-class SplashController: ViewController {
+class PyramidController: ViewController {
     
     var Vertices: [Vertex] = [
-        Vertex(x:  1, y: -1, z: 0, r: 1, g: 0, b: 0, a: 1),
-        Vertex(x:  1, y:  1, z: 0, r: 0, g: 1, b: 0, a: 1),
-        Vertex(x: -1, y:  1, z: 0, r: 0, g: 0, b: 1, a: 1),
-        Vertex(x: -1, y: -1, z: 0, r: 0, g: 0, b: 0, a: 1),
+        Vertex(x:  -1, y: 0, z: -1, r: 1, g: 0, b: 0, a: 1),
+        Vertex(x:  -1, y:  0, z: 1, r: 0, g: 1, b: 0, a: 1),
+        Vertex(x: 1, y:  0, z: 1, r: 0, g: 0, b: 1, a: 1),
+        Vertex(x: 1, y: 0, z: -1, r: 0, g: 0, b: 0, a: 1),
+        Vertex(x: 0, y: 1, z: 0, r: 0, g: 0, b: 0, a: 1),
     ]
     
     var Indices: [GLubyte] = [
         0, 1, 2,
-        2, 3, 0
+        2, 3, 0,
+        0, 3, 4,
+        0, 1, 4,
+        1, 2, 4,
+        2, 3, 4
     ]
     
     override func viewDidLoad() {
@@ -141,3 +146,4 @@ class SplashController: ViewController {
         glBindVertexArrayOES(0)
     }
 }
+

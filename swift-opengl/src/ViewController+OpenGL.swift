@@ -50,8 +50,14 @@ extension ViewController: GLKViewControllerDelegate {
             modelViewMatrix = GLKMatrix4Identity
         }
         // 2
-        if self.isRotating {
-            rotation += 90 * Float(timeSinceLastUpdate)
+        if self.isRotatingOnX {
+            self.rotation += 90 * Float(timeSinceLastUpdate)
+            modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 1, 0, 0)
+        } else if self.isRotatingOnY {
+            self.rotation += 90 * Float(timeSinceLastUpdate)
+            modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 1, 0)
+        } else if self.isRotatingOnZ {
+            self.rotation += 90 * Float(timeSinceLastUpdate)
             modelViewMatrix = GLKMatrix4Rotate(modelViewMatrix, GLKMathDegreesToRadians(rotation), 0, 0, 1)
         }
         // 3

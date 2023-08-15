@@ -20,7 +20,9 @@ class ViewController: GLKViewController {
     
     var isPerspective: Bool = true
     
-    var isRotating: Bool = false
+    var isRotatingOnX: Bool = false
+    var isRotatingOnY: Bool = false
+    var isRotatingOnZ: Bool = false
     var rotation: Float = 0.0
 
     override func viewDidLoad() {

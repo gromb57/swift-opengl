@@ -19,6 +19,8 @@
 		A0BF7B162A89600E0043FDA6 /* ViewController+OpenGL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B152A89600E0043FDA6 /* ViewController+OpenGL.swift */; };
 		A0BF7B192A8AB63A0043FDA6 /* SquareController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B182A8AB63A0043FDA6 /* SquareController.swift */; };
 		A0BF7B1B2A8AB6930043FDA6 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1A2A8AB6930043FDA6 /* SplashController.swift */; };
+		A0BF7B1D2A8ABA2F0043FDA6 /* SphereController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1C2A8ABA2F0043FDA6 /* SphereController.swift */; };
+		A0BF7B1F2A8B5DA60043FDA6 /* PyramidController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		A0BF7B152A89600E0043FDA6 /* ViewController+OpenGL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+OpenGL.swift"; sourceTree = "<group>"; };
 		A0BF7B182A8AB63A0043FDA6 /* SquareController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SquareController.swift; sourceTree = "<group>"; };
 		A0BF7B1A2A8AB6930043FDA6 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
+		A0BF7B1C2A8ABA2F0043FDA6 /* SphereController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereController.swift; sourceTree = "<group>"; };
+		A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,8 @@
 		A0BF7B172A8AB61E0043FDA6 /* shapes */ = {
 			isa = PBXGroup;
 			children = (
+				A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */,
+				A0BF7B1C2A8ABA2F0043FDA6 /* SphereController.swift */,
 				A0BF7B1A2A8AB6930043FDA6 /* SplashController.swift */,
 				A0BF7B182A8AB63A0043FDA6 /* SquareController.swift */,
 			);
@@ -184,8 +190,10 @@
 				A0BF7AFD2A8431AD0043FDA6 /* ViewController.swift in Sources */,
 				A0BF7B162A89600E0043FDA6 /* ViewController+OpenGL.swift in Sources */,
 				A0BF7B142A895F1A0043FDA6 /* ViewController+ContextMenu.swift in Sources */,
+				A0BF7B1F2A8B5DA60043FDA6 /* PyramidController.swift in Sources */,
 				A0BF7B0D2A8437FD0043FDA6 /* Vertex.swift in Sources */,
 				A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */,
+				A0BF7B1D2A8ABA2F0043FDA6 /* SphereController.swift in Sources */,
 				A0BF7B192A8AB63A0043FDA6 /* SquareController.swift in Sources */,
 				A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */,
 				A0BF7B1B2A8AB6930043FDA6 /* SplashController.swift in Sources */,

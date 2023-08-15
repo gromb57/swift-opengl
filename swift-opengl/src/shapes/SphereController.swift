@@ -1,5 +1,5 @@
 //
-//  SplashController.swift
+//  SphereController.swift
 //  swift-opengl
 //
 //  Created by Jerome Bach on 14/08/2023.
@@ -8,7 +8,7 @@
 import Foundation
 import GLKit
 
-class SplashController: ViewController {
+class SphereController: ViewController {
     
     var Vertices: [Vertex] = [
         Vertex(x:  1, y: -1, z: 0, r: 1, g: 0, b: 0, a: 1),

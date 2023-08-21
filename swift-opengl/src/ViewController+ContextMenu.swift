@@ -10,6 +10,11 @@ import UIKit
 import GLKit
 
 extension ViewController: UIContextMenuInteractionDelegate {
+    func setNewRootViewController(vc: UIViewController) {
+        UIApplication.shared.windows.first!.rootViewController = nil
+        UIApplication.shared.windows.first!.rootViewController = vc
+    }
+
     func setupContextMenu() {
         let button = UIButton(type: UIButton.ButtonType.roundedRect)
         button.setImage(UIImage(systemName: "contextualmenu.and.cursorarrow"), for: UIControl.State.normal)
@@ -110,32 +115,28 @@ extension ViewController: UIContextMenuInteractionDelegate {
     func pyramidAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Pyramid", comment: ""),
                 image: UIImage(systemName: "pyramid")) { [weak self] action in
-            UIApplication.shared.windows.first!.rootViewController = nil
-            UIApplication.shared.windows.first!.rootViewController = PyramidController()
+            self?.setNewRootViewController(vc: PyramidController())
        }
     }
     
     func sphereAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Sphere", comment: ""),
                 image: UIImage(systemName: "circlebadge")) { [weak self] action in
-            UIApplication.shared.windows.first!.rootViewController = nil
-            UIApplication.shared.windows.first!.rootViewController = SphereController()
+            self?.setNewRootViewController(vc: SphereController())
        }
     }
           
     func splashAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Splash", comment: ""),
                 image: UIImage(systemName: "photo.artframe")) { [weak self] action in
-            UIApplication.shared.windows.first!.rootViewController = nil
-            UIApplication.shared.windows.first!.rootViewController = SplashController()
+            self?.setNewRootViewController(vc: SplashController())
        }
     }
     
     func squareAction() -> UIAction {
         return UIAction(title: NSLocalizedString("Square", comment: ""),
                 image: UIImage(systemName: "square")) { [weak self] action in
-            UIApplication.shared.windows.first!.rootViewController = nil
-            UIApplication.shared.windows.first!.rootViewController = SquareController()
+            self?.setNewRootViewController(vc: SquareController())
        }
     }
 }

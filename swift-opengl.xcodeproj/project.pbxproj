@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A0BA90DD2A93FB5C00944CB9 /* swift_openglTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90DC2A93FB5C00944CB9 /* swift_openglTests.swift */; };
+		A0BA90E42A93FC1E00944CB9 /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */; };
+		A0BA90E62A953FFF00944CB9 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E52A953FFF00944CB9 /* Matrix.swift */; };
+		A0BA90E72A9540CD00944CB9 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E52A953FFF00944CB9 /* Matrix.swift */; };
 		A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AF82A8431AD0043FDA6 /* AppDelegate.swift */; };
 		A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AFA2A8431AD0043FDA6 /* SceneDelegate.swift */; };
 		A0BF7AFD2A8431AD0043FDA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AFC2A8431AD0043FDA6 /* ViewController.swift */; };
@@ -23,7 +27,21 @@
 		A0BF7B1F2A8B5DA60043FDA6 /* PyramidController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		A0BA90DE2A93FB5C00944CB9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A0BF7AED2A8431AD0043FDA6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A0BF7AF42A8431AD0043FDA6;
+			remoteInfo = "swift-opengl";
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		A0BA90DA2A93FB5C00944CB9 /* swift-openglTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-openglTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0BA90DC2A93FB5C00944CB9 /* swift_openglTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_openglTests.swift; sourceTree = "<group>"; };
+		A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; };
+		A0BA90E52A953FFF00944CB9 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
 		A0BF7AF52A8431AD0043FDA6 /* swift-opengl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-opengl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BF7AF82A8431AD0043FDA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0BF7AFA2A8431AD0043FDA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +61,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		A0BA90D72A93FB5C00944CB9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BF7AF22A8431AD0043FDA6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -53,11 +78,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A0BA90DB2A93FB5C00944CB9 /* swift-openglTests */ = {
+			isa = PBXGroup;
+			children = (
+				A0BA90DC2A93FB5C00944CB9 /* swift_openglTests.swift */,
+				A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */,
+			);
+			path = "swift-openglTests";
+			sourceTree = "<group>";
+		};
 		A0BF7AEC2A8431AD0043FDA6 = {
 			isa = PBXGroup;
 			children = (
 				A0BF7AF62A8431AD0043FDA6 /* Products */,
 				A0BF7AF72A8431AD0043FDA6 /* swift-opengl */,
+				A0BA90DB2A93FB5C00944CB9 /* swift-openglTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -65,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BF7AF52A8431AD0043FDA6 /* swift-opengl.app */,
+				A0BA90DA2A93FB5C00944CB9 /* swift-openglTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -87,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				A0BF7B102A8438660043FDA6 /* extensions */,
+				A0BA90E52A953FFF00944CB9 /* Matrix.swift */,
 				A0BF7B172A8AB61E0043FDA6 /* shapes */,
 				A0BF7B0C2A8437FD0043FDA6 /* Vertex.swift */,
 				A0BF7AFC2A8431AD0043FDA6 /* ViewController.swift */,
@@ -118,6 +155,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		A0BA90D92A93FB5C00944CB9 /* swift-openglTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A0BA90E22A93FB5C00944CB9 /* Build configuration list for PBXNativeTarget "swift-openglTests" */;
+			buildPhases = (
+				A0BA90D62A93FB5C00944CB9 /* Sources */,
+				A0BA90D72A93FB5C00944CB9 /* Frameworks */,
+				A0BA90D82A93FB5C00944CB9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A0BA90DF2A93FB5C00944CB9 /* PBXTargetDependency */,
+			);
+			name = "swift-openglTests";
+			productName = "swift-openglTests";
+			productReference = A0BA90DA2A93FB5C00944CB9 /* swift-openglTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		A0BF7AF42A8431AD0043FDA6 /* swift-opengl */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A0BF7B092A8431B20043FDA6 /* Build configuration list for PBXNativeTarget "swift-opengl" */;
@@ -145,6 +200,10 @@
 				LastSwiftUpdateCheck = 1430;
 				LastUpgradeCheck = 1430;
 				TargetAttributes = {
+					A0BA90D92A93FB5C00944CB9 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = A0BF7AF42A8431AD0043FDA6;
+					};
 					A0BF7AF42A8431AD0043FDA6 = {
 						CreatedOnToolsVersion = 14.3;
 					};
@@ -164,11 +223,19 @@
 			projectRoot = "";
 			targets = (
 				A0BF7AF42A8431AD0043FDA6 /* swift-opengl */,
+				A0BA90D92A93FB5C00944CB9 /* swift-openglTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		A0BA90D82A93FB5C00944CB9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BF7AF32A8431AD0043FDA6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -182,6 +249,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		A0BA90D62A93FB5C00944CB9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A0BA90E42A93FC1E00944CB9 /* MatrixTests.swift in Sources */,
+				A0BA90DD2A93FB5C00944CB9 /* swift_openglTests.swift in Sources */,
+				A0BA90E72A9540CD00944CB9 /* Matrix.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A0BF7AF12A8431AD0043FDA6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -194,6 +271,7 @@
 				A0BF7B0D2A8437FD0043FDA6 /* Vertex.swift in Sources */,
 				A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */,
 				A0BF7B1D2A8ABA2F0043FDA6 /* SphereController.swift in Sources */,
+				A0BA90E62A953FFF00944CB9 /* Matrix.swift in Sources */,
 				A0BF7B192A8AB63A0043FDA6 /* SquareController.swift in Sources */,
 				A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */,
 				A0BF7B1B2A8AB6930043FDA6 /* SplashController.swift in Sources */,
@@ -201,6 +279,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A0BA90DF2A93FB5C00944CB9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A0BF7AF42A8431AD0043FDA6 /* swift-opengl */;
+			targetProxy = A0BA90DE2A93FB5C00944CB9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		A0BF7AFE2A8431AD0043FDA6 /* Main.storyboard */ = {
@@ -222,6 +308,48 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		A0BA90E02A93FB5C00944CB9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YZP4BVF2B;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromebach.swift-openglTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-opengl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swift-opengl";
+			};
+			name = Debug;
+		};
+		A0BA90E12A93FB5C00944CB9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6YZP4BVF2B;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.jeromebach.swift-openglTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/swift-opengl.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/swift-opengl";
+			};
+			name = Release;
+		};
 		A0BF7B072A8431B20043FDA6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -397,6 +525,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		A0BA90E22A93FB5C00944CB9 /* Build configuration list for PBXNativeTarget "swift-openglTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A0BA90E02A93FB5C00944CB9 /* Debug */,
+				A0BA90E12A93FB5C00944CB9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		A0BF7AF02A8431AD0043FDA6 /* Build configuration list for PBXProject "swift-opengl" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -11,6 +11,9 @@
 		A0BA90E42A93FC1E00944CB9 /* MatrixTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */; };
 		A0BA90E62A953FFF00944CB9 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E52A953FFF00944CB9 /* Matrix.swift */; };
 		A0BA90E72A9540CD00944CB9 /* Matrix.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E52A953FFF00944CB9 /* Matrix.swift */; };
+		A0BA90E92A954CF300944CB9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E82A954CF300944CB9 /* Vector.swift */; };
+		A0BA90EA2A954D0900944CB9 /* Vector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90E82A954CF300944CB9 /* Vector.swift */; };
+		A0BA90EC2A954D4F00944CB9 /* VectorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BA90EB2A954D4F00944CB9 /* VectorTests.swift */; };
 		A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AF82A8431AD0043FDA6 /* AppDelegate.swift */; };
 		A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AFA2A8431AD0043FDA6 /* SceneDelegate.swift */; };
 		A0BF7AFD2A8431AD0043FDA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7AFC2A8431AD0043FDA6 /* ViewController.swift */; };
@@ -38,10 +41,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A066717A2A95CB4300A6FA29 /* swift-opengl.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = "swift-opengl.xctestplan"; sourceTree = "<group>"; };
 		A0BA90DA2A93FB5C00944CB9 /* swift-openglTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "swift-openglTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BA90DC2A93FB5C00944CB9 /* swift_openglTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_openglTests.swift; sourceTree = "<group>"; };
 		A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatrixTests.swift; sourceTree = "<group>"; };
 		A0BA90E52A953FFF00944CB9 /* Matrix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matrix.swift; sourceTree = "<group>"; };
+		A0BA90E82A954CF300944CB9 /* Vector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vector.swift; sourceTree = "<group>"; };
+		A0BA90EB2A954D4F00944CB9 /* VectorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VectorTests.swift; sourceTree = "<group>"; };
 		A0BF7AF52A8431AD0043FDA6 /* swift-opengl.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "swift-opengl.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0BF7AF82A8431AD0043FDA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0BF7AFA2A8431AD0043FDA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,6 +89,7 @@
 			children = (
 				A0BA90DC2A93FB5C00944CB9 /* swift_openglTests.swift */,
 				A0BA90E32A93FC1E00944CB9 /* MatrixTests.swift */,
+				A0BA90EB2A954D4F00944CB9 /* VectorTests.swift */,
 			);
 			path = "swift-openglTests";
 			sourceTree = "<group>";
@@ -90,6 +97,7 @@
 		A0BF7AEC2A8431AD0043FDA6 = {
 			isa = PBXGroup;
 			children = (
+				A066717A2A95CB4300A6FA29 /* swift-opengl.xctestplan */,
 				A0BF7AF62A8431AD0043FDA6 /* Products */,
 				A0BF7AF72A8431AD0043FDA6 /* swift-opengl */,
 				A0BA90DB2A93FB5C00944CB9 /* swift-openglTests */,
@@ -125,6 +133,7 @@
 				A0BF7B102A8438660043FDA6 /* extensions */,
 				A0BA90E52A953FFF00944CB9 /* Matrix.swift */,
 				A0BF7B172A8AB61E0043FDA6 /* shapes */,
+				A0BA90E82A954CF300944CB9 /* Vector.swift */,
 				A0BF7B0C2A8437FD0043FDA6 /* Vertex.swift */,
 				A0BF7AFC2A8431AD0043FDA6 /* ViewController.swift */,
 				A0BF7B132A895F1A0043FDA6 /* ViewController+ContextMenu.swift */,
@@ -255,7 +264,9 @@
 			files = (
 				A0BA90E42A93FC1E00944CB9 /* MatrixTests.swift in Sources */,
 				A0BA90DD2A93FB5C00944CB9 /* swift_openglTests.swift in Sources */,
+				A0BA90EA2A954D0900944CB9 /* Vector.swift in Sources */,
 				A0BA90E72A9540CD00944CB9 /* Matrix.swift in Sources */,
+				A0BA90EC2A954D4F00944CB9 /* VectorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +282,7 @@
 				A0BF7B0D2A8437FD0043FDA6 /* Vertex.swift in Sources */,
 				A0BF7AF92A8431AD0043FDA6 /* AppDelegate.swift in Sources */,
 				A0BF7B1D2A8ABA2F0043FDA6 /* SphereController.swift in Sources */,
+				A0BA90E92A954CF300944CB9 /* Vector.swift in Sources */,
 				A0BA90E62A953FFF00944CB9 /* Matrix.swift in Sources */,
 				A0BF7B192A8AB63A0043FDA6 /* SquareController.swift in Sources */,
 				A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */,

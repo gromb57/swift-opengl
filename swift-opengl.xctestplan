@@ -1,0 +1,29 @@
+{
+  "configurations" : [
+    {
+      "id" : "DABFDCB1-92F4-4CA4-80DD-4F0DC44DD84B",
+      "name" : "Test Scheme Action",
+      "options" : {
+
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:swift-opengl.xcodeproj",
+      "identifier" : "A0BF7AF42A8431AD0043FDA6",
+      "name" : "swift-opengl"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:swift-opengl.xcodeproj",
+        "identifier" : "A0BA90D92A93FB5C00944CB9",
+        "name" : "swift-openglTests"
+      }
+    }
+  ],
+  "version" : 1
+}

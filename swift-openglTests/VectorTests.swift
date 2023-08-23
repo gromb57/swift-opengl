@@ -71,4 +71,39 @@ final class VectorTests: XCTestCase {
         let aIsTheClosest: Bool = simd_distance_squared(a, target) < simd_distance_squared(b, target)
         XCTAssertFalse(aIsTheClosest)
     }
+
+    func testCalculateRefraction() {
+        let incident = simd_double2(x: 1.5, y: -1)
+        let normal = simd_double2(x: 0, y: 1)
+        
+        let (reflected, refracted) = Vector.calculateRefraction(incident: incident, normal: normal)
+        
+        XCTAssertEqual(reflected.x, 0.83, accuracy: 0.01)
+        XCTAssertEqual(reflected.y, 0.55, accuracy: 0.01)
+        XCTAssertEqual(refracted.x, 0.55, accuracy: 0.01)
+        XCTAssertEqual(refracted.y, -0.83, accuracy: 0.01)
+    }
+
+    func testNormalizeTriangle() {
+        let vertex1 = simd_float3(-1.5, 0.5, 0)
+        let vertex2 = simd_float3(1, 0, 3)
+        let vertex3 = simd_float3(0.5, -0.5, -1.5)
+        
+        let normal = Vector.normalizeTriangle(vertex1: vertex1, vertex2: vertex2, vertex3: vertex3)
+        XCTAssertEqual(normal.x, 0.35, accuracy: 0.01)
+        XCTAssertEqual(normal.y, 0.92, accuracy: 0.01)
+        XCTAssertEqual(normal.z, -0.14, accuracy: 0.01)
+    }
+    
+    func testInterpolateLinearly() {
+        let values = Vector.interpolateLinearly()
+        XCTAssertEqual(values.count, 1024)
+    }
+    
+    func testInterpolateSmoothly() {
+        let values = Vector.interpolateSmoothly()
+        XCTAssertEqual(values.count, 1024)
+        XCTAssertEqual(values.first, 0.0)
+        XCTAssertEqual(values.last ?? 0.0, 1.0, accuracy: 0.0001)
+    }
 }

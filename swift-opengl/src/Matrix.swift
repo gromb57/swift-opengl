@@ -8,6 +8,7 @@
 import Foundation
 import simd
 
+/// SEE: https://developer.apple.com/documentation/accelerate/working_with_matrices
 struct Matrix {
     static func makeTranslationMatrix(tx: Float, ty: Float) -> simd_float3x3 {
         var matrix = matrix_identity_float3x3

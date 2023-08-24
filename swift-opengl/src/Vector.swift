@@ -8,6 +8,7 @@
 import Foundation
 import simd
 
+/// SEE: https://developer.apple.com/documentation/accelerate/working_with_vectors
 struct Vector {
     static let rec709Luma = simd_float3(0.2126, 0.7152, 0.0722)
     

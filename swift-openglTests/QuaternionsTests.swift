@@ -52,7 +52,7 @@ final class QuaternionsTests: XCTestCase {
                                 z: iz)
         XCTAssertFalse(Quaternions.isUnit(length: Quaternions.length(ix: ix, iy: iy, iz: iz, r: r)))
         let q = Quaternions.convertToUnit(axis: axis, angle: r)
-        XCTAssertTrue(Quaternions.isUnit(length: Quaternions.convertToUnit(axis: axis, angle: r).length))
+        XCTAssertTrue(Quaternions.isUnit(length: q.length))
     }
     
     func testConvertToUnit() throws {
@@ -60,5 +60,15 @@ final class QuaternionsTests: XCTestCase {
                                 y: 1,
                                 z: 0.5)
         XCTAssertEqual(Quaternions.convertToUnit(axis: axis, angle: .pi).length, 1.0)
+    }
+
+    func testRotatePointAroundSphere() throws {
+        let originVector = simd_float3(x: 0, y: 0, z: 1)
+        let rotatedVector = Quaternions.rotatePointAroundSphere(originVector: originVector, degrees: -60)
+        XCTAssertEqual(rotatedVector, simd_float3(x: 0.0, y: 0.8660254, z: 0.50000006))
+    }
+
+    func testInterpolateTwoPointsOnSphere() throws {
+        
     }
 }

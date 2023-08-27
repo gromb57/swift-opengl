@@ -31,6 +31,7 @@
 		A0BF7B1B2A8AB6930043FDA6 /* SplashController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1A2A8AB6930043FDA6 /* SplashController.swift */; };
 		A0BF7B1D2A8ABA2F0043FDA6 /* SphereController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1C2A8ABA2F0043FDA6 /* SphereController.swift */; };
 		A0BF7B1F2A8B5DA60043FDA6 /* PyramidController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */; };
+		A0E8B8232A9BB87800CAF3C0 /* BezierController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0E8B8222A9BB87800CAF3C0 /* BezierController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		A0BF7B1A2A8AB6930043FDA6 /* SplashController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashController.swift; sourceTree = "<group>"; };
 		A0BF7B1C2A8ABA2F0043FDA6 /* SphereController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SphereController.swift; sourceTree = "<group>"; };
 		A0BF7B1E2A8B5DA60043FDA6 /* PyramidController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PyramidController.swift; sourceTree = "<group>"; };
+		A0E8B8222A9BB87800CAF3C0 /* BezierController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BezierController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +138,7 @@
 		A0BF7B0F2A84381E0043FDA6 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				A0E8B8212A9BB86600CAF3C0 /* curves */,
 				A0BF7B102A8438660043FDA6 /* extensions */,
 				A0BA90E52A953FFF00944CB9 /* Matrix.swift */,
 				A06671992A97B78A00A6FA29 /* Quaternions.swift */,
@@ -166,6 +169,14 @@
 				A0BF7B182A8AB63A0043FDA6 /* SquareController.swift */,
 			);
 			path = shapes;
+			sourceTree = "<group>";
+		};
+		A0E8B8212A9BB86600CAF3C0 /* curves */ = {
+			isa = PBXGroup;
+			children = (
+				A0E8B8222A9BB87800CAF3C0 /* BezierController.swift */,
+			);
+			path = curves;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				A0BF7B192A8AB63A0043FDA6 /* SquareController.swift in Sources */,
 				A066719A2A97B78A00A6FA29 /* Quaternions.swift in Sources */,
 				A0BF7AFB2A8431AD0043FDA6 /* SceneDelegate.swift in Sources */,
+				A0E8B8232A9BB87800CAF3C0 /* BezierController.swift in Sources */,
 				A0BF7B1B2A8AB6930043FDA6 /* SplashController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

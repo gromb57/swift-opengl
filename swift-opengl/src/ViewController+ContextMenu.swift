@@ -49,7 +49,8 @@ extension ViewController: UIContextMenuInteractionDelegate {
         return  [
             self.perspectiveAction(),
             self.rotationsSubmenu(),
-            self.shapesSubmenu()
+            self.shapesSubmenu(),
+            self.curvesSubmenu()
         ]
     }
     
@@ -103,6 +104,7 @@ extension ViewController: UIContextMenuInteractionDelegate {
         }
     }
 
+    // MARK: Shapes
     func shapesSubmenu() -> UIMenu {
         return UIMenu(title: "Shapes", children: [
             self.pyramidAction(),
@@ -139,4 +141,19 @@ extension ViewController: UIContextMenuInteractionDelegate {
             self?.setNewRootViewController(vc: SquareController())
        }
     }
+
+    // MARK: Courbes
+    func curvesSubmenu() -> UIMenu {
+        return UIMenu(title: "Curves", children: [
+            self.bezierAction()
+        ])
+    }
+    
+    func bezierAction() -> UIAction {
+        return UIAction(title: NSLocalizedString("Bezier", comment: ""),
+                image: UIImage(systemName: "point.topleft.down.curvedto.point.bottomright.up")) { [weak self] action in
+            self?.setNewRootViewController(vc: BezierController())
+       }
+    }
+   
 }
